@@ -4,7 +4,8 @@ import datetime
 import matplotlib.pyplot as plt
 from matplotlib import pylab
 from matplotlib.dates import DateFormatter, WeekdayLocator, DayLocator, MONDAY, date2num
-from matplotlib.finance import candlestick_ohlc
+#from matplotlib.finance import candlestick_ohlc
+from mpl_finance import candlestick_ohlc
 import numpy as np
 
 
@@ -17,7 +18,7 @@ end = datetime.date.today()
 # third is the start date, fourth is the end date
 
 apple = web.DataReader("AAPL", "yahoo", start, end)
-print apple.tail()
+print( apple.tail())
 type(apple)
 
 # nifty = web.DataReader("NIFTY", "yahoo", start, end)
