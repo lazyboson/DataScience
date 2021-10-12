@@ -20,7 +20,7 @@ def k_nearest_neighbors(data, predict, k=3):
             distances.append([euclidean_distance, group])
 
     votes = [i[1] for i in sorted(distances)[:k]]
-    print Counter(votes).most_common(1)
+    print (Counter(votes).most_common(1))
     votes_result = Counter(votes).most_common(1)[0][0]
     return votes_result
 
